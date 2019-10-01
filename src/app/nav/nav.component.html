@@ -13,56 +13,54 @@
   </div>
 </nav>
 -->
-  <div class="d-flex" id="wrapper">
-  <!-- Sidebar -->
-  <div class="bg-light border-right" id="sidebar-wrapper">
-    <div class="sidebar-heading"><img id="logo" src="assets/img/atos.png"/></div>
-    <div class="list-group list-group-flush">
-      <a routerLink="/" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-      <a routerLink="/mysterylunch" class="list-group-item list-group-item-action bg-light">Participate</a>
-      <div class="container" id="profile">
-        <h1 class="profileHeader">logged in as:</h1>
-        <p class="profileData">
-          <!-- weg machen -->
-          Osal Gotschiew
-          B&PS PB ...
-          </p>
-      </div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading"><img id="logo" src="assets/img/atos.png" /></div>
+        <div class="list-group list-group-flush">
+            <a routerLink="/" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+            <a routerLink="/mysterylunch" class="list-group-item list-group-item-action bg-light">Participate</a>
+            <div class="container" id="profile">
+                <h1 class="profileHeader">logged in as:</h1>
+                <p class="profileData">
+                    <!-- weg machen -->
+                    Osal Gotschiew B&PS PB ...
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  <div id="page-content-wrapper">
+    <div id="page-content-wrapper">
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-          <button class="btn" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebartogglerbutton($event)">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Feedback</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Settings
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">
-                    <mat-slide-toggle>
-                      <label>Darkmode</label>
-                    </mat-slide-toggle>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Login</a>
-                </div>
-              </li>
-            </ul>
-          </div>
+            <button class="navbar-btn" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebartogglerbutton($event)">
+        <span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feedback</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Settings
+            </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">
+                                <mat-slide-toggle>
+                                    <label>Darkmode</label>
+                                </mat-slide-toggle>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Login</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <!-- APP ROUTLET MUSS HIER SEIN! -->
         <router-outlet></router-outlet>
-  </div>
+    </div>
