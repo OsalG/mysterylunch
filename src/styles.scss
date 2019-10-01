@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+.mainPart{
+  overflow-y: scroll;
+  max-height: 740px;
+  overflow-x: hidden;
+}
+
+
+@import '~@angular/material/theming';
+@include mat-core();
+$mysterylunch-primary: mat-palette($mat-indigo);
+$mysterylunch-accent: mat-palette($mat-pink, A200, A100, A400);
+$mysterylunch-warn: mat-palette($mat-red);
+$mysterylunch-theme: mat-light-theme($mysterylunch-primary, $mysterylunch-accent, $mysterylunch-warn);
+@include angular-material-theme($mysterylunch-theme);
+
+body {
+  overflow-x: hidden;
+}
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

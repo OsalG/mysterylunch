@@ -1,0 +1,48 @@
+<div class="mainPart">
+
+
+<div class="container-fluid">
+  <h1 class="mt-4">Participate in an Atos internal event</h1>
+  <form class="form-inline">
+    <div class="form-group">
+      <select class="round" name="location" size="1">
+        <option value="" disabled selected>location..</option>
+
+
+      </select>
+      </div>
+
+      <div class="form-group">
+      <select class="round" name="date" size="1" placeholder="hello">
+        <option value="" disabled selected>date..</option>
+
+
+      </select>
+    </div>
+    <button class="button" type="submit">Submit</button>
+  </form>
+
+  <mat-divider class="hrToEvent"></mat-divider>
+  <mat-slide-toggle [formControl]="autoRenew" (change)="specify()">
+    <label>Slide to specify your interests</label>
+  </mat-slide-toggle>
+  <br />
+
+  <div class="game" [hidden]="!isShow">
+    <label>your choices: </label>
+    <label class="choices" id="choose1"> </label>
+    <label class="choices" id="choose2"> </label>
+    <label class="choices" id="choose3"> </label>
+    <label class="choices" id="choose4"> </label>
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile id="b1" (click)="activate34('pizza')" [hidden]="!bild1">1</mat-grid-tile>
+      <mat-grid-tile id="b11" (click)="activate34('pasta')" [hidden]="!bild1">2</mat-grid-tile>
+      <mat-grid-tile id="b2" (click)="activate56('fussball')" [hidden]="!bild2">3</mat-grid-tile>
+      <mat-grid-tile id="b22" (click)="activate56('anderes')" [hidden]="!bild2">4</mat-grid-tile>
+      <mat-grid-tile id="b3" (click)="activate78('fahrrad')" [hidden]="!bild3">5</mat-grid-tile>
+      <mat-grid-tile id="b33" (click)="activate78('auto')" [hidden]="!bild3">6</mat-grid-tile>
+      <mat-grid-tile id="b4" (click)="activatelast('politik')" [hidden]="!bild4">7</mat-grid-tile>
+      <mat-grid-tile id="b44" (click)="activatelast('wissenschaft')" [hidden]="!bild4">8</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
