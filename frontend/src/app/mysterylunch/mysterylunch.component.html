@@ -1,0 +1,49 @@
+<div class="mainPart">
+
+
+    <div class="container-fluid">
+        <h1 class="mt-4">Participate in an Atos internal event</h1>
+        <form class="form-inline">
+            <div class="form-group">
+                <select class="round" name="location" size="1">
+          <option value="" disabled selected>location..</option>
+
+
+        </select>
+            </div>
+
+            <div class="form-group">
+                <select class="round" name="date" size="1" placeholder="hello">
+          <option value="" disabled selected>date..</option>
+
+
+        </select>
+            </div>
+            <button class="button" type="submit">Submit</button>
+        </form>
+
+        <mat-divider class="hrToEvent"></mat-divider>
+        <mat-slide-toggle [formControl]="autoRenew" (change)="specify()">
+            <label>Slide to specify your interests</label>
+        </mat-slide-toggle>
+        <br />
+
+        <div class="game" [hidden]="!isShow">
+            <label>your choices: </label>
+            <label class="choices" id="choose1"> </label>
+            <label class="choices" id="choose2"> </label>
+            <label class="choices" id="choose3"> </label>
+            <label class="choices" id="choose4"> </label>
+
+            <div class="container">
+                <input type="image" id="bilder" src="assets/img/pizza.jpg" (click)="activate34('Pizza')" [hidden]="!bild1">
+                <input type="image" id="bilder" src="assets/img/pasta.jpg" (click)="activate34('Pasta')" [hidden]="!bild1">
+                <input type="image" id="bilder" src="assets/img/fussball.jpg" (click)="activate56('Fussball')" [hidden]="!bild2">
+                <input type="image" id="bilder" src="assets/img/andere.jpg" (click)="activate56('Anderes')" [hidden]="!bild2">
+                <input type="image" id="bilder" src="assets/img/fahrrad.jpg" (click)="activate78('Fahrrad')" [hidden]="!bild3">
+                <input type="image" id="bilder" src="assets/img/auto.jpg" (click)="activate78('Auto')" [hidden]="!bild3">
+                <input type="image" id="bilder" src="assets/img/politik.jpg" (click)="activatelast('Politik')" [hidden]="!bild4">
+                <input type="image" id="bilder" src="assets/img/wirtschaft.jpg" (click)="activatelast('Wirtschaft')" [hidden]="!bild4">
+            </div>
+        </div>
+    </div>
